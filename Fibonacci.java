@@ -21,8 +21,6 @@ public class Fibonacci extends ConsoleProgram {
 		println("Hello please insert an integer");
 
 		do {
-			try 
-			{
 		int start = readInt();
 
 			
@@ -44,11 +42,9 @@ public class Fibonacci extends ConsoleProgram {
 				}
 			}
 		}
-		 catch(NumberFormatException e)
-		{
-			 println("Please input a number ");
-		 }
-		}while(check == false);
+
+
+		while(check == false);
 	}
 }
 
