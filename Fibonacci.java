@@ -9,6 +9,7 @@
 import acm.program.*;
 
 public class Fibonacci extends ConsoleProgram {
+	
 	private static final int MaxResult = 10000;
 
 	public void run() {

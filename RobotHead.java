@@ -12,18 +12,24 @@ public class RobotHead extends GraphicsProgram {
 
 	public void run() {
 		double ELength = EYE_RADIUS * 2;
-		GRect face = new GRect(getWidth() / 2, getHeight() / 2, HEAD_WIDTH, HEAD_HEIGHT);
+		face(HEAD_WIDTH, HEAD_HEIGHT);
+
 		GOval eyes = new GOval(ELength, ELength);
 		GRect mouth = new GRect(135, 400, MOUTH_WIDTH, MOUTH_HEIGHT);
+		mouth.setFillColor(Color.white);
+		mouth.setFilled(true);
 
+		add(mouth);
+		makeEyes(ELength);
+	}
+
+	private void face(int headWidth, int headHeight) {
+		GRect face = new GRect(getWidth() / 2, getHeight() / 2, HEAD_WIDTH, HEAD_HEIGHT);
 		face.setFilled(true);
 		face.setColor(Color.black);
 		face.setFillColor(Color.gray);
-		mouth.setFillColor(Color.white);
-		mouth.setFilled(true);
 		add(face);
-		add(mouth);
-		makeEyes(ELength);
+
 	}
 
 	private void makeEyes(double eLength) {
